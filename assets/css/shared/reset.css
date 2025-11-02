@@ -1,0 +1,16 @@
+/* ==================== RESET & BASE STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f1e;
+    color: white;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+
