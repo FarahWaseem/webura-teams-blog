@@ -4,7 +4,7 @@ Professional and organized frontend structure for Webura website's Teams and Blo
 
 ## 👨‍💻 Developer
 
-**Farah Skiek** - Frontend Developer  
+**Farah Skaik** - Frontend Developer  
 Responsible for developing the Teams & Blog sections of the Webura website.
 
 ---
@@ -168,13 +168,13 @@ All pages are fully responsive with:
 
 ## 👨‍💻 Developer Information
 
-**Developer:** Farah Skiek  
+**Developer:** Farah Skaik  
 **Role:** Frontend Developer  
 **Sections Developed:** Teams & Blog Pages  
 **Project:** Webura Website Frontend Development
 
 ---
 
-© 2024 Webura. All Rights Reserved  
-**Developed by Farah Skiek for Webura Team** ❤️
+© 2025 Webura. All Rights Reserved  
+**Developed by Farah Skaik for Webura Team** ❤️
 
