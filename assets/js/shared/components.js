@@ -56,6 +56,8 @@
         searchSuggestions.forEach(suggestion => {
             suggestion.addEventListener('click', function() {
                 searchInput.value = this.textContent;
+                // Trigger input event to fire search functionality
+                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
                 searchInput.focus();
             });
         });

@@ -1,10 +1,107 @@
 /**
  * Teams Page Functionality
- * Handles testimonials carousel
+ * Handles team search and testimonials carousel
  */
 
 (function() {
     'use strict';
+
+    // ==================== TEAM SEARCH ====================
+    const searchInput = document.getElementById('searchInput');
+    const teamCards = document.querySelectorAll('.team-card');
+    const teamGrid = document.querySelector('.team-grid');
+    
+    // Create "No results" message element
+    let noResultsMessage = null;
+
+    // Function to create "No results" message
+    function createNoResultsMessage() {
+        if (noResultsMessage) return noResultsMessage;
+        
+        noResultsMessage = document.createElement('div');
+        noResultsMessage.className = 'no-results-message';
+        noResultsMessage.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px; color: rgba(255, 255, 255, 0.7); grid-column: 1 / -1;">
+                <i class="fa-solid fa-search" style="font-size: 48px; margin-bottom: 20px; opacity: 0.5;"></i>
+                <h3 style="font-size: 24px; margin-bottom: 10px;">No Team Members Found</h3>
+                <p style="font-size: 16px;">Try searching with different keywords</p>
+            </div>
+        `;
+        return noResultsMessage;
+    }
+
+    // Function to search in team members
+    function searchTeamMembers(searchTerm) {
+        if (!teamCards.length) return;
+
+        const term = searchTerm.toLowerCase().trim();
+        let hasResults = false;
+
+        // If search term is empty, show all team members
+        if (term === '') {
+            teamCards.forEach(card => {
+                card.style.display = '';
+            });
+            
+            // Remove no results message if exists
+            if (noResultsMessage && noResultsMessage.parentNode) {
+                noResultsMessage.parentNode.removeChild(noResultsMessage);
+            }
+            return;
+        }
+
+        // Search through each team card
+        teamCards.forEach(card => {
+            const name = card.querySelector('.team-name')?.textContent.toLowerCase() || '';
+            const role = card.querySelector('.team-role')?.textContent.toLowerCase() || '';
+
+            // Check if search term matches name or role
+            const matchesName = name.includes(term);
+            const matchesRole = role.includes(term);
+
+            if (matchesName || matchesRole) {
+                card.style.display = '';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Show or hide "no results" message
+        if (teamGrid) {
+            // Remove existing no results message if exists
+            if (noResultsMessage && noResultsMessage.parentNode) {
+                noResultsMessage.parentNode.removeChild(noResultsMessage);
+            }
+
+            // If no results, show message
+            if (!hasResults) {
+                const message = createNoResultsMessage();
+                teamGrid.appendChild(message);
+            }
+        }
+    }
+
+    // Add event listener to search input
+    if (searchInput) {
+        // Search as user types (includes when suggestions update the value)
+        searchInput.addEventListener('input', function(e) {
+            searchTeamMembers(e.target.value);
+        });
+
+        // Also search on Enter key
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                searchTeamMembers(e.target.value);
+            }
+        });
+
+        // Trigger search immediately if input has a value when page loads
+        if (searchInput.value) {
+            searchTeamMembers(searchInput.value);
+        }
+    }
 
     // ==================== TESTIMONIALS CAROUSEL ====================
     const testimonialTrack = document.querySelector('.testimonial-track');
