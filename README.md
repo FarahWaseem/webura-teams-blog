@@ -6,7 +6,8 @@ Professional and organized frontend structure for Webura website. Currently incl
 
 ## 🌐 Live Demo
 
-**🔗 Demo Link:** [https://webura-website.netlify.app/](https://webura-website.netlify.app/)
+**🔗 Demo Link:** [https://farahwaseem.github.io/webura-teams-blog/](https://farahwaseem.github.io/webura-teams-blog/)
+
 
 ## 👨‍💻 Developers
 
