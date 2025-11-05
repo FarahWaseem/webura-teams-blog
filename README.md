@@ -1,15 +1,29 @@
-# 📁 Webura Website - Teams & Blog Sections
+# 📁 Webura Website - Frontend Development
 
-Professional and organized frontend structure for Webura website's Teams and Blog pages, designed for team collaboration.
+Professional and organized frontend structure for Webura website. Currently includes Home Page, Teams Page, and Blog Pages with modern design and full responsiveness.
+
+**⚠️ Work in Progress:** Additional pages (About-us, Services, Projects, FQA) are still under development.
 
 ## 🌐 Live Demo
 
-**🔗 Demo Link:** [https://farahwaseem.github.io/webura-teams-blog/](https://farahwaseem.github.io/webura-teams-blog/)
+**🔗 Demo Link:** [https://webura-website.netlify.app/](https://webura-website.netlify.app/)
 
-## 👨‍💻 Developer
+## 👨‍💻 Developers
 
-**Farah Skaik** - Frontend Developer  
-Responsible for developing the Teams & Blog sections of the Webura website.
+**Webura Team** - Frontend Development  
+Developing website with modern UI/UX design, responsive layout, and interactive features.
+
+### Completed Pages:
+- ✅ Home Page (index.html)
+- ✅ Teams Page (html/teams.html)
+- ✅ Blog Page (html/blog.html)
+- ✅ Blog Details Page (html/blog-details.html)
+
+### Pages Under Development:
+- 🚧 About-us Page
+- 🚧 Services Page
+- 🚧 Projects Page
+- 🚧 FQA (FAQ) Page
 
 ---
 
@@ -17,9 +31,11 @@ Responsible for developing the Teams & Blog sections of the Webura website.
 
 ```
 webura/
+├── index.html                     # Home Page
 ├── html/                          # HTML Pages Folder
 │   ├── teams.html                 # Teams Page
-│   └── blog.html                  # Blog Page
+│   ├── blog.html                  # Blog Page
+│   └── blog-details.html          # Blog Details Page
 │
 ├── assets/
 │   ├── css/
@@ -30,8 +46,10 @@ webura/
 │   │   │   ├── components.css     # Search Modal, Floating Buttons
 │   │   │   └── theme.css          # Light/Dark Theme
 │   │   │
-│   │   ├── teams.css              # CSS for Teams Page
-│   │   └── blog.css               # CSS for Blog Page
+│   │   ├── home.css                # CSS for Home Page
+│   │   ├── teams.css               # CSS for Teams Page
+│   │   ├── blog.css                # CSS for Blog Page
+│   │   └── blog-details.css        # CSS for Blog Details Page
 │   │
 │   └── js/
 │       ├── shared/                # Shared JavaScript Files
@@ -39,8 +57,10 @@ webura/
 │       │   ├── theme.js           # Theme Toggle & Logo Switching
 │       │   └── components.js      # Search Modal, Floating Buttons
 │       │
-│       ├── teams.js               # JavaScript for Teams Page (Testimonials Carousel)
-│       └── blog.js                # JavaScript for Blog Page
+│       ├── home.js                 # JavaScript for Home Page
+│       ├── teams.js                # JavaScript for Teams Page (Testimonials Carousel)
+│       ├── blog.js                 # JavaScript for Blog Page
+│       └── blog-details.js         # JavaScript for Blog Details Page
 │
 └── img/                           # Images
     ├── darkLogo.png               # Logo for Dark Theme
@@ -63,13 +83,21 @@ webura/
 
 ## 📄 Page-Specific Files
 
+### Home Page:
+- **home.css**: Hero section, services, features, stats, process, blog preview, CTA, and contact form styles
+- **home.js**: Home page functionality including stats counter, contact form validation
+
 ### Teams Page:
 - **teams.css**: Team cards and testimonials styles
 - **teams.js**: Testimonials carousel (Auto-play, navigation, swipe support)
 
 ### Blog Page:
-- **blog.css**: Blog cards styles
+- **blog.css**: Blog cards and grid styles
 - **blog.js**: Blog-specific functionality
+
+### Blog Details Page:
+- **blog-details.css**: Blog article layout and styling
+- **blog-details.js**: Blog post content and dynamic loading
 
 ## 📝 Usage Guide
 
@@ -118,19 +146,59 @@ webura/
 4. **Scalable**: Easy to add new pages
 5. **Professional**: Unified and easy-to-understand structure
 6. **Theme Support**: Light/Dark theme with automatic logo switching
+7. **Responsive Design**: Fully responsive across all devices
+8. **Modern UI/UX**: Beautiful gradients, animations, and hover effects
+9. **Interactive Elements**: Contact forms, search modals, floating buttons
+10. **SEO Optimized**: Semantic HTML and proper meta tags
 
-## 🚀 For Other Team Members
+## 🚀 Project Structure
 
-When creating new pages (Home, About, Services, Projects):
+### Completed Pages:
 
-1. Use the same shared file structure
-2. Create a page-specific CSS file in `assets/css/`
-3. Create a page-specific JavaScript file in `assets/js/` (if needed)
-4. Use the same Header and Footer pattern
-5. Place HTML files in the `html/` folder
-6. Use `../` prefix for assets paths (CSS, JS, images) since HTML files are in a subfolder
-7. Use `darkLogo.png` for dark theme and `whiteLogo.png` for light theme
-8. Logo switching is automatic via `theme.js` - just use `id="mainLogo"` and `id="footerLogo"`
+#### Home Page (index.html):
+- Hero Section with animated elements
+- Services Section (6 service cards)
+- Core Features Section (6 feature cards)
+- Features Section (Why Choose Us)
+- Stats Section (animated counters)
+- Process Section (Agile Process - 3 steps)
+- Blog Preview Section (latest articles)
+- CTA Section
+- Contact Form Section with validation
+
+#### Teams Page (html/teams.html):
+- Team members showcase
+- Testimonials carousel
+
+#### Blog Page (html/blog.html):
+- Blog posts grid
+- Blog categories and filters
+
+#### Blog Details Page (html/blog-details.html):
+- Full blog article layout
+- Dynamic content loading
+
+### Navigation (Ready):
+- ✅ Home (Completed)
+- 🚧 About-us (Under Development)
+- 🚧 Services (Under Development)
+- 🚧 Project (Under Development)
+- 🚧 FQA (Under Development)
+- ✅ Teams (Completed)
+- ✅ Blog (Completed)
+
+### Header Features:
+- Responsive navigation with mobile menu
+- Search modal
+- Theme toggle (Light/Dark)
+- Contact Us button
+
+### Footer Features:
+- Company information
+- Products links
+- Useful links
+- Contact information (Location, Email, Phone, Fax)
+- Social media links
 
 ## 🎨 Logo Files
 
@@ -170,15 +238,48 @@ All pages are fully responsive with:
 - 📱 Phone: +970592228451 / +972592228451
 - 📍 Location: Gaza City, Palestine
 
-## 👨‍💻 Developer Information
+## 📝 Recent Updates
 
-**Developer:** Farah Skaik  
-**Role:** Frontend Developer  
-**Sections Developed:** Teams & Blog Pages  
-**Project:** Webura Website Frontend Development
+### Latest Changes (Home Page):
+- ✅ Added Core Features Section (6 feature cards)
+- ✅ Added Process Section (Agile Process - 3 steps)
+- ✅ Updated Hero Section to match original design
+- ✅ Updated Navigation (Added FQA, renamed links)
+- ✅ Fixed Footer contact information (separated Phone and Fax)
+- ✅ Updated Contact Section with proper phone/fax separation
+- ✅ All existing pages now have consistent navigation
+
+### Note:
+Navigation links for About-us, Services, Projects, and FQA are ready but pages are still under development by other team members.
+
+## 🚀 Getting Started
+
+### Clone the Repository:
+```bash
+git clone https://github.com/your-username/webura.git
+cd webura
+```
+
+### Open in Browser:
+Simply open `index.html` in your browser or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js (http-server)
+npx http-server
+```
+
+## 📞 Contact
+
+**Webura Team**
+- 📧 Email: weburagaza@gmail.com
+- 📱 Phone: +970592228451
+- 📠 Fax: +972592228451
+- 📍 Location: Webura, Gaza City, Palestine
 
 ---
 
 © 2025 Webura. All Rights Reserved  
-**Developed by Farah Skaik for Webura Team** ❤️
+**Developed by Webura Team** ❤️
 
