@@ -16,50 +16,74 @@
     // Check for saved theme preference or default to 'dark'
     const currentTheme = localStorage.getItem('theme') || 'dark';
     
-    // Detect if we're on index.html (root) or in html/ subdirectory
-    const isRootPage = window.location.pathname === '/' || 
-                       window.location.pathname.endsWith('index.html') ||
-                       !window.location.pathname.includes('/html/');
-    const logoBasePath = isRootPage ? 'img/' : '../img/';
+    /**
+     * Detect the correct logo base path by checking the original src attribute
+     * This is more reliable than parsing window.location.pathname
+     */
+    function detectLogoBasePath() {
+        // Get the original src attribute from HTML (most reliable)
+        if (mainLogo) {
+            const originalSrc = mainLogo.getAttribute('src');
+            if (originalSrc) {
+                // Check if it starts with '../img/' (subdirectory pages)
+                if (originalSrc.startsWith('../img/')) {
+                    return '../img/';
+                }
+                // Check if it starts with 'img/' (root page)
+                if (originalSrc.startsWith('img/')) {
+                    return 'img/';
+                }
+                // For full URLs, extract the relative part
+                const relativeMatch = originalSrc.match(/(img\/|\.\.\/img\/)/);
+                if (relativeMatch && relativeMatch[1]) {
+                    return relativeMatch[1];
+                }
+            }
+        }
+        
+        // Fallback: detect based on pathname
+        const pathname = window.location.pathname;
+        const isRootPage = pathname === '/' || 
+                           pathname === '/webura-teams-blog/' ||
+                           pathname.endsWith('/index.html') ||
+                           pathname.endsWith('/webura-teams-blog/index.html') ||
+                           (!pathname.includes('/html/') && !pathname.includes('/webura-teams-blog/html/'));
+        
+        return isRootPage ? 'img/' : '../img/';
+    }
+    
+    const logoBasePath = detectLogoBasePath();
+    
+    /**
+     * Get the correct logo path based on current page location
+     * @param {string} logoName - 'darkLogo' or 'whiteLogo'
+     * @returns {string} - Correct relative path to logo
+     */
+    function getLogoPath(logoName) {
+        return logoBasePath + logoName + '.png';
+    }
     
     /**
      * Update logo paths based on theme
      * @param {string} theme - 'light' or 'dark'
      */
     function updateLogos(theme) {
-        const darkLogoPath = logoBasePath + 'darkLogo.png';
-        const whiteLogoPath = logoBasePath + 'whiteLogo.png';
+        const darkLogoPath = getLogoPath('darkLogo');
+        const whiteLogoPath = getLogoPath('whiteLogo');
         
         if (theme === 'light') {
             if (mainLogo) {
-                // Preserve the base path and just change the logo filename
-                if (mainLogo.src.includes('darkLogo')) {
-                    mainLogo.src = mainLogo.src.replace('darkLogo.png', 'whiteLogo.png');
-                } else {
-                    mainLogo.src = whiteLogoPath;
-                }
+                mainLogo.src = whiteLogoPath;
             }
             if (footerLogo) {
-                if (footerLogo.src.includes('darkLogo')) {
-                    footerLogo.src = footerLogo.src.replace('darkLogo.png', 'whiteLogo.png');
-                } else {
-                    footerLogo.src = whiteLogoPath;
-                }
+                footerLogo.src = whiteLogoPath;
             }
         } else {
             if (mainLogo) {
-                if (mainLogo.src.includes('whiteLogo')) {
-                    mainLogo.src = mainLogo.src.replace('whiteLogo.png', 'darkLogo.png');
-                } else {
-                    mainLogo.src = darkLogoPath;
-                }
+                mainLogo.src = darkLogoPath;
             }
             if (footerLogo) {
-                if (footerLogo.src.includes('whiteLogo')) {
-                    footerLogo.src = footerLogo.src.replace('whiteLogo.png', 'darkLogo.png');
-                } else {
-                    footerLogo.src = darkLogoPath;
-                }
+                footerLogo.src = darkLogoPath;
             }
         }
     }
