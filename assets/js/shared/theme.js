@@ -16,35 +16,50 @@
     // Check for saved theme preference or default to 'dark'
     const currentTheme = localStorage.getItem('theme') || 'dark';
     
+    // Detect if we're on index.html (root) or in html/ subdirectory
+    const isRootPage = window.location.pathname === '/' || 
+                       window.location.pathname.endsWith('index.html') ||
+                       !window.location.pathname.includes('/html/');
+    const logoBasePath = isRootPage ? 'img/' : '../img/';
+    
     /**
      * Update logo paths based on theme
      * @param {string} theme - 'light' or 'dark'
      */
     function updateLogos(theme) {
-        const darkLogoPath = '../img/darkLogo.png';
-        const whiteLogoPath = '../img/whiteLogo.png';
+        const darkLogoPath = logoBasePath + 'darkLogo.png';
+        const whiteLogoPath = logoBasePath + 'whiteLogo.png';
         
         if (theme === 'light') {
             if (mainLogo) {
-                mainLogo.src = mainLogo.src.includes('darkLogo') 
-                    ? mainLogo.src.replace('darkLogo.png', 'whiteLogo.png')
-                    : whiteLogoPath;
+                // Preserve the base path and just change the logo filename
+                if (mainLogo.src.includes('darkLogo')) {
+                    mainLogo.src = mainLogo.src.replace('darkLogo.png', 'whiteLogo.png');
+                } else {
+                    mainLogo.src = whiteLogoPath;
+                }
             }
             if (footerLogo) {
-                footerLogo.src = footerLogo.src.includes('darkLogo')
-                    ? footerLogo.src.replace('darkLogo.png', 'whiteLogo.png')
-                    : whiteLogoPath;
+                if (footerLogo.src.includes('darkLogo')) {
+                    footerLogo.src = footerLogo.src.replace('darkLogo.png', 'whiteLogo.png');
+                } else {
+                    footerLogo.src = whiteLogoPath;
+                }
             }
         } else {
             if (mainLogo) {
-                mainLogo.src = mainLogo.src.includes('whiteLogo')
-                    ? mainLogo.src.replace('whiteLogo.png', 'darkLogo.png')
-                    : darkLogoPath;
+                if (mainLogo.src.includes('whiteLogo')) {
+                    mainLogo.src = mainLogo.src.replace('whiteLogo.png', 'darkLogo.png');
+                } else {
+                    mainLogo.src = darkLogoPath;
+                }
             }
             if (footerLogo) {
-                footerLogo.src = footerLogo.src.includes('whiteLogo')
-                    ? footerLogo.src.replace('whiteLogo.png', 'darkLogo.png')
-                    : darkLogoPath;
+                if (footerLogo.src.includes('whiteLogo')) {
+                    footerLogo.src = footerLogo.src.replace('whiteLogo.png', 'darkLogo.png');
+                } else {
+                    footerLogo.src = darkLogoPath;
+                }
             }
         }
     }
