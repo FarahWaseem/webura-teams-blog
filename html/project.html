@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects - Webura | Digital Excellence">
+    <title>Projects - Webura</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../assets/css/shared/reset.css">
+    <link rel="stylesheet" href="../assets/css/shared/header.css">
+    <link rel="stylesheet" href="../assets/css/shared/footer.css">
+    <link rel="stylesheet" href="../assets/css/shared/components.css">
+    <link rel="stylesheet" href="../assets/css/shared/theme.css">
+    
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+    <!-- Split Animated Header -->
+    <header class="split-header">
+        <!-- Left Side -->
+        <div class="header-left">
+            <div class="logo-animated">
+                <img src="../img/darkLogo.png" alt="Webura Logo" id="mainLogo">
+                <div class="brand-pulse"></div>
+            </div>
+            <span class="tagline">Digital Excellence</span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Center - Floating Nav -->
+        <nav class="floating-nav" id="floatingNav">
+            <a href="../index.html" class="nav-pill">Home</a>
+            <a href="about.html" class="nav-pill">About-us</a>
+            <a href="services.html" class="nav-pill">Services</a>
+            <a href="project.html" class="nav-pill active">Project</a>
+            <a href="faq.html" class="nav-pill">FQA</a>
+            <a href="teams.html" class="nav-pill">Teams</a>
+            <a href="blog.html" class="nav-pill">Blog</a>
+        </nav>
+
+        <!-- Right Side -->
+        <div class="header-right">
+            <div class="quick-search">
+                <i class="fa-solid fa-search"></i>
+            </div>
+            <div class="theme-toggle">🌙</div>
+            <button class="cta-gradient" id="contactUsBtn">Contact Us</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Project Section Header -->
+        <section class="project-section">
+            <div class="section-header">
+                <h1 class="section-title">Our Projects</h1>
+                <p class="section-description">
+                    Discover our latest web and mobile projects, designed to help businesses grow. Explore a selection of our completed projects showcasing innovation and quality.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-grid-section">
+            <div class="container">
+                <!-- Project Filters -->
+                <div class="project-filters" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true" aria-label="Show all projects">All Projects</button>
+                    <button class="filter-btn" data-filter="web" aria-pressed="false" aria-label="Filter by web development">Web Development</button>
+                    <button class="filter-btn" data-filter="mobile" aria-pressed="false" aria-label="Filter by mobile apps">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="seo" aria-pressed="false" aria-label="Filter by SEO and marketing">SEO & Marketing</button>
+                    <button class="filter-btn" data-filter="design" aria-pressed="false" aria-label="Filter by UI/UX design">UI/UX Design</button>
+                </div>
+                <div class="projects-grid" role="list" aria-label="Projects list">
+                    <!-- Project Post 1 -->
+                    <article class="project-card" 
+                             role="listitem"
+                             data-category="seo"
+                             data-project-title="Social Media Marketing Platform"
+                             data-project-image="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop&q=80"
+                             data-project-date="March 2024"
+                             data-project-team="Webura Team"
+                             data-project-description="A comprehensive social media management platform that helps businesses schedule posts, track analytics, and engage with their audience across multiple platforms. Built with modern technologies for seamless performance. This platform includes advanced features like automated posting, real-time analytics, audience insights, and multi-platform integration. It's designed to help businesses grow their online presence efficiently and effectively."
+                             data-project-tech="React, Node.js, MongoDB, Express, REST API"
+                             data-project-link="#">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop&q=80" 
+                                 alt="Social Media Marketing Platform" 
+                                 loading="lazy"
+                                 decoding="async">
+                            <div class="project-tags">
+                                <span class="tag">SEO</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span><i class="fa-solid fa-user"></i> Webura Team</span>
+                                <span><i class="fa-solid fa-calendar"></i> March 2024</span>
+                            </div>
+                            <h3 class="project-title">Social Media Marketing Platform</h3>
+                            <p class="project-excerpt">
+                                A comprehensive social media management platform that helps businesses schedule posts, track analytics, and engage with their audience across multiple platforms. Built with modern technologies for seamless performance.
+                            </p>
+                            <a href="#" class="read-more view-project-btn" aria-label="View details of Social Media Marketing Platform project">
+                                View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Post 2 -->
+                    <article class="project-card" 
+                             role="listitem"
+                             data-category="web"
+                             data-project-title="Modern E-Commerce Platform"
+                             data-project-image="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop&q=80"
+                             data-project-date="February 2024"
+                             data-project-team="Webura Team"
+                             data-project-description="A fully responsive e-commerce solution with advanced features including inventory management, payment integration, and customer analytics. Designed for scalability and optimal user experience. The platform supports multiple payment gateways, real-time inventory tracking, order management, customer reviews, and a comprehensive admin dashboard. It's optimized for performance and provides an excellent shopping experience across all devices."
+                             data-project-tech="Vue.js, Laravel, MySQL, Stripe API, Redis"
+                             data-project-link="#">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop&q=80" 
+                                 alt="E-Commerce Platform" loading="lazy" decoding="async">
+                            <div class="project-tags">
+                                <span class="tag">E-Commerce</span>
+                                <span class="tag">Web Development</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span><i class="fa-solid fa-user"></i> Webura Team</span>
+                                <span><i class="fa-solid fa-calendar"></i> February 2024</span>
+                            </div>
+                            <h3 class="project-title">Modern E-Commerce Platform</h3>
+                            <p class="project-excerpt">
+                                A fully responsive e-commerce solution with advanced features including inventory management, payment integration, and customer analytics. Designed for scalability and optimal user experience.
+                            </p>
+                            <a href="#" class="read-more view-project-btn" aria-label="View details of Social Media Marketing Platform project">
+                                View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Post 3 -->
+                    <article class="project-card" 
+                             role="listitem"
+                             data-category="mobile"
+                             data-project-title="Mobile Banking Application"
+                             data-project-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80"
+                             data-project-date="January 2024"
+                             data-project-team="Webura Team"
+                             data-project-description="A secure and user-friendly mobile banking app with biometric authentication, real-time transactions, and comprehensive financial management tools. Available for both iOS and Android platforms. The app features end-to-end encryption, two-factor authentication, bill payments, money transfers, account statements, and investment tracking. It provides a seamless and secure banking experience with intuitive UI/UX design."
+                             data-project-tech="React Native, Node.js, PostgreSQL, Firebase, JWT"
+                             data-project-link="#">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80" 
+                                 alt="Mobile Banking App" loading="lazy" decoding="async">
+                            <div class="project-tags">
+                                <span class="tag">Mobile</span>
+                                <span class="tag">Finance</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span><i class="fa-solid fa-user"></i> Webura Team</span>
+                                <span><i class="fa-solid fa-calendar"></i> January 2024</span>
+                            </div>
+                            <h3 class="project-title">Mobile Banking Application</h3>
+                            <p class="project-excerpt">
+                                A secure and user-friendly mobile banking app with biometric authentication, real-time transactions, and comprehensive financial management tools. Available for both iOS and Android platforms.
+                            </p>
+                            <a href="#" class="read-more view-project-btn" aria-label="View details of Social Media Marketing Platform project">
+                                View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Post 4 -->
+                    <article class="project-card" 
+                             role="listitem"
+                             data-category="web"
+                             data-project-title="Business Analytics Dashboard"
+                             data-project-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80"
+                             data-project-date="December 2023"
+                             data-project-team="Webura Team"
+                             data-project-description="An intuitive dashboard solution that provides real-time insights, data visualization, and comprehensive reporting tools. Helps businesses make data-driven decisions with interactive charts and customizable widgets. The dashboard includes features like real-time data updates, customizable widgets, export functionality, advanced filtering, and integration with multiple data sources. It's designed to help businesses track KPIs and make informed decisions."
+                             data-project-tech="Angular, Python, Django, PostgreSQL, Chart.js, D3.js"
+                             data-project-link="#">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" 
+                                 alt="Business Dashboard" loading="lazy" decoding="async">
+                            <div class="project-tags">
+                                <span class="tag">Dashboard</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span><i class="fa-solid fa-user"></i> Webura Team</span>
+                                <span><i class="fa-solid fa-calendar"></i> December 2023</span>
+                            </div>
+                            <h3 class="project-title">Business Analytics Dashboard</h3>
+                            <p class="project-excerpt">
+                                An intuitive dashboard solution that provides real-time insights, data visualization, and comprehensive reporting tools. Helps businesses make data-driven decisions with interactive charts and customizable widgets.
+                            </p>
+                            <a href="#" class="read-more view-project-btn" aria-label="View details of Social Media Marketing Platform project">
+                                View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Post 5 -->
+                    <article class="project-card" 
+                             role="listitem"
+                             data-category="seo"
+                             data-project-title="SEO Optimization & Analytics Platform"
+                             data-project-image="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&q=80"
+                             data-project-date="November 2023"
+                             data-project-team="Webura Team"
+                             data-project-description="A powerful SEO tool that helps businesses improve their search engine rankings through keyword analysis, competitor tracking, and automated optimization recommendations. Includes comprehensive reporting and insights. The platform offers features like keyword research, backlink analysis, site audit, rank tracking, and automated SEO reports. It helps businesses understand their SEO performance and provides actionable recommendations to improve their search visibility."
+                             data-project-tech="Next.js, TypeScript, Python, FastAPI, Elasticsearch, Google Analytics API"
+                             data-project-link="#">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&q=80" 
+                                 alt="SEO Optimization Tool" loading="lazy" decoding="async">
+                            <div class="project-tags">
+                                <span class="tag">SEO</span>
+                                <span class="tag">Marketing</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span><i class="fa-solid fa-user"></i> Webura Team</span>
+                                <span><i class="fa-solid fa-calendar"></i> November 2023</span>
+                            </div>
+                            <h3 class="project-title">SEO Optimization & Analytics Platform</h3>
+                            <p class="project-excerpt">
+                                A powerful SEO tool that helps businesses improve their search engine rankings through keyword analysis, competitor tracking, and automated optimization recommendations. Includes comprehensive reporting and insights.
+                            </p>
+                            <a href="#" class="read-more view-project-btn" aria-label="View details of Social Media Marketing Platform project">
+                                View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Post 6 -->
+                    <article class="project-card" 
+                             role="listitem"
+                             data-category="design"
+                             data-project-title="Comprehensive UI/UX Design System"
+                             data-project-image="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&q=80"
+                             data-project-date="October 2023"
+                             data-project-team="Webura Team"
+                             data-project-description="A complete design system with reusable components, style guides, and design patterns. Ensures consistency across all digital products while maintaining flexibility for customization and brand identity. The design system includes a comprehensive component library, design tokens, accessibility guidelines, and documentation. It helps teams build consistent, scalable, and maintainable user interfaces while reducing design and development time."
+                             data-project-tech="Figma, Storybook, React, TypeScript, CSS Variables, Design Tokens"
+                             data-project-link="#">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&q=80" 
+                                 alt="UI/UX Design System" loading="lazy" decoding="async">
+                            <div class="project-tags">
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Design System</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span><i class="fa-solid fa-user"></i> Webura Team</span>
+                                <span><i class="fa-solid fa-calendar"></i> October 2023</span>
+                            </div>
+                            <h3 class="project-title">Comprehensive UI/UX Design System</h3>
+                            <p class="project-excerpt">
+                                A complete design system with reusable components, style guides, and design patterns. Ensures consistency across all digital products while maintaining flexibility for customization and brand identity.
+                            </p>
+                            <a href="#" class="read-more view-project-btn" aria-label="View details of Social Media Marketing Platform project">
+                                View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../img/darkLogo.png" alt="Webura Logo" id="footerLogo">
+                </div>
+                <p>At Webura, we specialize in delivering creative digital solutions that empower businesses to succeed. From web design to digital marketing, we bring your ideas to life.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/weburatech" target="_blank" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/weburatech" target="_blank" title="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/weburatech" target="_blank" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/webura" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/webura" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#custom-design">Custom Website Design</a></li>
+                    <li><a href="#app-dev">App Development</a></li>
+                    <li><a href="#ui-ux">UI/UX Design</a></li>
+                    <li><a href="#seo">SEO Optimization</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i> 
+                        <a href="https://www.google.com/maps/place/Gaza+City" target="_blank">Webura, Gaza City, Palestine</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i> 
+                        <a href="mailto:weburagaza@gmail.com">weburagaza@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i> 
+                        <a href="tel:+970592228451">+ 970592228451</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-fax"></i> 
+                        <a href="tel:+972592228451">+ 972592228451</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Copyright: Webura. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-container">
+            <div class="search-header">
+                <h3>Search</h3>
+                <button class="search-close" id="searchClose">×</button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input" id="searchInput" placeholder="Type to search...">
+                <i class="fa-solid fa-search search-icon"></i>
+            </div>
+            <div class="search-suggestions">
+                <span>Web Development</span>
+                <span>Digital Marketing</span>
+                <span>UI/UX Design</span>
+                <span>App Development</span>
+                <span>SEO</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="project-modal" id="projectModal" aria-hidden="true" aria-modal="true" role="dialog" aria-labelledby="projectModalTitle">
+        <div class="project-modal-container">
+            <button class="project-modal-close" id="projectModalClose" aria-label="Close project modal">×</button>
+            <div class="project-modal-content">
+                <div class="project-modal-image">
+                    <img id="projectModalImg" src="" alt="Project Image">
+                </div>
+                <div class="project-modal-body">
+                    <div class="project-modal-header">
+                        <h2 id="projectModalTitle"></h2>
+                        <div class="project-modal-meta">
+                            <span id="projectModalDate"></span>
+                            <span id="projectModalTeam"></span>
+                        </div>
+                    </div>
+                    <div class="project-modal-description">
+                        <p id="projectModalDescription"></p>
+                    </div>
+                    <div class="project-modal-tech">
+                        <h4><i class="fa-solid fa-code"></i> Technologies Used</h4>
+                        <div class="tech-tags" id="projectModalTech"></div>
+                    </div>
+                    <div class="project-modal-actions">
+                        <a href="#" id="projectModalLink" class="project-link-btn" target="_blank">
+                            <i class="fa-solid fa-external-link"></i> Visit Project
+                        </a>
+                        <button class="project-close-btn" id="projectModalCloseBtn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <div class="float-btn scroll-top" id="scrollTopBtn" title="Scroll to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <a href="https://wa.me/970592228451" target="_blank" class="float-btn whatsapp" id="whatsappBtn" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Shared JavaScript -->
+    <script src="../assets/js/shared/header.js"></script>
+    <script src="../assets/js/shared/theme.js"></script>
+    <script src="../assets/js/shared/components.js"></script>
+    
+    <!-- Page Specific JavaScript -->
+    <script src="../assets/js/project.js"></script>
+</body>
+</html>
+

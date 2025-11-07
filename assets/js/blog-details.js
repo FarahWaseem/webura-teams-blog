@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    console.log(`Loading blog post ID: ${currentPostId}, Title: ${post.title}`);
+    // Loading blog post
     
     // Update page title
     document.title = `${post.title} - Webura`;

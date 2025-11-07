@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formMessage.textContent = "";
 
         try {
-            // إرسال النموذج (وهميًا الآن - يمكن ربطه بـ PHP أو API)
+            // Form submission (currently simulated - can be connected to PHP or API)
             await new Promise(resolve => setTimeout(resolve, 2000));
 
             form.reset();

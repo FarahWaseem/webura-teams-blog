@@ -107,7 +107,7 @@
         }
     }
 
-    console.log('Blog page loaded with search functionality');
+    // Blog page initialized with search functionality
 })();
 
 
